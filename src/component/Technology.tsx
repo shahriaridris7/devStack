@@ -1,5 +1,7 @@
 import React, { use } from 'react';
 import type { technologyType } from '../type/technologyType';
+import All from './All';
+
 
 interface technologiesProps{
    technologiesPromise: Promise<technologyType[]>
@@ -9,8 +11,7 @@ const Technology = ({technologiesPromise}:technologiesProps) => {
      const technology=use(technologiesPromise);
     return (
         <div>
-       
-        
+            <All technology={technology}></All>
         </div>
     );
 };
