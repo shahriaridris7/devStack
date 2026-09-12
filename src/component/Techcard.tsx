@@ -4,7 +4,7 @@ import type { technologyType } from '../type/technologyType';
 const Techcard = ({tech}:{tech:technologyType}) => {
     return (
         <div className="card  relative bg-base-100 w-96 shadow-sm">
- <figure className="h-16 flex items-center justify-between px-4">
+ <figure className="h-16 flex items-center justify-between px-6">
   <img
     src={tech.icon}
     alt={tech.name}
@@ -17,16 +17,16 @@ const Techcard = ({tech}:{tech:technologyType}) => {
 </figure>
 
 
-  <div className="card-body mt--4">
-    <h2 className="card-title">{tech.name}</h2>
+  <div className="card-body  ">
+    <h2 className="card-title my-2">{tech.name}</h2>
     <p>{tech.description}</p>
-    <div className='flex justify-between item center'>
+    <div className='flex justify-between item center my-2'>
         <h2 className='badge badge-ghost'>{tech.category}</h2>
         <h2 className='badge badge-ghost'>{tech.difficulty}</h2>
         <h2 className='badge badge-ghost'>{tech.rating}</h2>
     </div>
     <div className="card-actions justify-end">
-      <button className="btn btn-block btn-neutral mx-auto">Add to Stack</button>
+      <button className="btn btn-block btn-neutral mx-auto my-2">Add to Stack</button>
     </div>
   </div>
 </div>
