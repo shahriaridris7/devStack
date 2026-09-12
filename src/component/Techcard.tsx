@@ -4,11 +4,19 @@ import type { technologyType } from '../type/technologyType';
 const Techcard = ({tech}:{tech:technologyType}) => {
     return (
         <div className="card  relative bg-base-100 w-96 shadow-sm">
-  <figure className='relative h-16'>
-    <img
+ <figure className="h-16 flex items-center justify-between px-4">
+  <img
     src={tech.icon}
-      alt="Shoes"className='  absolute top-6 left-4 w-10 h-10 object-contain' />
-  </figure>
+    alt={tech.name}
+    className="w-10 h-10 object-contain"
+  />
+
+  <div className="badge badge-outline badge-secondary">
+    {tech.badge}
+  </div>
+</figure>
+
+
   <div className="card-body mt--4">
     <h2 className="card-title">{tech.name}</h2>
     <p>{tech.description}</p>
