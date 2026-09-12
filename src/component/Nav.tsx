@@ -18,7 +18,7 @@ const  Nav = () => {
         </div>
         <div className='flex justify-between gap-4'>
             <h2>Sign in</h2>
-            <button className="btn h-7 btn-secondary border-r-2">Sign up</button>
+            <button className="btn  btn-secondary btn-sm">Sign up</button>
         </div>
         
         </div>
