@@ -12,11 +12,11 @@ const Selected = ({selected,onRemove,onRemoveAll}:selectedProps) => {
             <h2 className='text-2xl font-bold'>Your Stack</h2>
 
             
-            <p>{selected.length} Technology Selected</p>
+            <p className='m-2'>{selected.length} Technology Selected</p>
             {selected.map((tech) => (
                 <div
                     key={tech.id}
-                    className=" flex items-center justify-between border-2 border-slate-300 rounded-lg shadow-sm p-4"
+                    className=" flex items-center justify-between gap-2 border-2  border-slate-300 rounded-lg shadow-sm p-4"
                 >
                     <div className="flex items-center gap-4 ">
                         <img

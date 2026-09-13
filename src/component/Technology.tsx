@@ -29,7 +29,7 @@ const handleRemoveAll = () => {
     setSelected([]);
 };
     return (
-        <div className='grid grid-cols-4  gap-5 container mx-auto'>
+        <div className='grid grid-cols-1 lg:grid-cols-4  gap-5 container mx-auto'>
             <div className='col-span-3'>
                  <All technology={technology}
                  onAdd={handleAdd} 

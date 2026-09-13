@@ -4,6 +4,7 @@ import Hero from "./component/Hero"
 import Nav from "./component/Nav"
 import Technology from "./component/Technology";
 import type { technologyType } from "./type/technologyType";
+import Footer from "./component/Footer";
 
 const  technologiesfetch =async():Promise<technologyType[]>=>{
   const res= await fetch('/data.json')
@@ -29,8 +30,9 @@ const technologiesPromise= technologiesfetch()
 >
   <Technology technologiesPromise={technologiesPromise} />
 </Suspense>
-       
+        <Footer/>
        </>
+      
   )
 }
 
