@@ -1,7 +1,10 @@
 import React from 'react';
 import type { technologyType } from '../type/technologyType';
-
-const Techcard = ({tech}:{tech:technologyType}) => {
+interface techProps{
+  tech:technologyType
+  onAdd: (tech: technologyType)=> void;
+}
+const Techcard = ({tech,onAdd}:techProps) => {
     return (
         <div className="card  relative bg-base-100 w-96 shadow-sm">
  <figure className="h-16 flex items-center justify-between px-6">
@@ -26,7 +29,9 @@ const Techcard = ({tech}:{tech:technologyType}) => {
         <h2 className='badge badge-ghost'>{tech.rating}</h2>
     </div>
     <div className="card-actions justify-end">
-      <button className="btn btn-block btn-neutral mx-auto my-2">Add to Stack</button>
+      <button
+       onClick={() => onAdd(tech)}
+        className="btn btn-block btn-neutral mx-auto my-2">Add to Stack</button>
     </div>
   </div>
 </div>

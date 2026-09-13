@@ -2,7 +2,7 @@ import React from 'react';
 import logo from "../assets/logo-text.png"
 const  Nav = () => {
     return (
-    <nav className='mt-2'>
+    <nav className='sticky top-0 z-50 bg-base-100 my-4'>
         <div className='flex justify-between items-center container mx-auto'>
                 
         <div><img src={logo} alt="" /></div>
@@ -24,7 +24,7 @@ const  Nav = () => {
         </div>
      
      
-  <div className="divider mt-2"></div>
+  <div className="divider mt-0"></div>
  
 
     </nav>
