@@ -7,15 +7,16 @@ interface selectedProps{
 }
 const Selected = ({selected,onRemove,onRemoveAll}:selectedProps) => {
     return (
-        <div>
-            <h2>Your Stack</h2>
+        <div className='border-2 border-slate-300 rounded-lg shadow-sm p-4'>
+            
+            <h2 className='text-2xl font-bold'>Your Stack</h2>
 
             
             <p>{selected.length} Technology Selected</p>
             {selected.map((tech) => (
                 <div
                     key={tech.id}
-                    className=" flex items-center justify-between border p-3"
+                    className=" flex items-center justify-between border-2 border-slate-300 rounded-lg shadow-sm p-4"
                 >
                     <div className="flex items-center gap-4 ">
                         <img
@@ -25,7 +26,7 @@ const Selected = ({selected,onRemove,onRemoveAll}:selectedProps) => {
                         />
 
                         <div>
-                            <h3 className="font-bold">
+                            <h3 className="font-bold ">
                                 {tech.name}
                             </h3>
 
@@ -42,7 +43,7 @@ const Selected = ({selected,onRemove,onRemoveAll}:selectedProps) => {
                     </div>
                     
                           <button onClick={() => onRemove(tech.id)}>
-                             ×
+                          <div className='text-2xl fon'> ×</div> 
                    </button>
                   
                     
@@ -50,9 +51,11 @@ const Selected = ({selected,onRemove,onRemoveAll}:selectedProps) => {
                     
                 </div>
             ))}
-             <button onClick={onRemoveAll}>
-    Remove All
-</button>
+             
+      <button
+       onClick={onRemoveAll}
+        className="btn btn-block btn-neutral mx-auto my-2">Remove all</button>
+
        
         </div>
        

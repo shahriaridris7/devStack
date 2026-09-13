@@ -16,8 +16,10 @@ const Technology = ({technologiesPromise}:technologiesProps) => {
      const [selected, setSelected] = useState<technologyType[]>([]);
      const handleAdd = (tech: technologyType) => {
         if (selected.some((item) => item.id === tech.id)) {
+            
         return;
     }
+    
         setSelected([...selected, tech]);
         };
         const handleRemove = (id: string) => {
@@ -30,7 +32,8 @@ const handleRemoveAll = () => {
         <div className='grid grid-cols-4  gap-5 container mx-auto'>
             <div className='col-span-3'>
                  <All technology={technology}
-                 onAdd={handleAdd} ></All>
+                 onAdd={handleAdd} 
+                 selected={selected}></All>
             </div>
             <div className='col-span-1'><Selected selected={selected} onRemove={handleRemove} onRemoveAll={handleRemoveAll}></Selected></div>
             

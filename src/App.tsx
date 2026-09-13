@@ -16,12 +16,19 @@ function App() {
 const technologiesPromise= technologiesfetch()
   return (
     <>
+    
       <Nav/>
        <Hero/>
 
-          <Suspense fallback={<h1>loading..</h1>}>
-      <Technology technologiesPromise={technologiesPromise} />
-          </Suspense>
+          <Suspense
+  fallback={
+    <div className="flex justify-center items-center ">
+      <span className="loading loading-bars loading-xl"></span>
+    </div>
+  }
+>
+  <Technology technologiesPromise={technologiesPromise} />
+</Suspense>
        
        </>
   )

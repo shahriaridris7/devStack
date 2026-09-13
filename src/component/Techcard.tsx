@@ -3,8 +3,9 @@ import type { technologyType } from '../type/technologyType';
 interface techProps{
   tech:technologyType
   onAdd: (tech: technologyType)=> void;
+  isSelected:boolean;
 }
-const Techcard = ({tech,onAdd}:techProps) => {
+const Techcard = ({tech,onAdd,isSelected}:techProps) => {
     return (
         <div className="card  relative bg-base-100 w-96 shadow-sm">
  <figure className="h-16 flex items-center justify-between px-6">
@@ -21,7 +22,7 @@ const Techcard = ({tech,onAdd}:techProps) => {
 
 
   <div className="card-body  ">
-    <h2 className="card-title my-2">{tech.name}</h2>
+    <h2 className="card-title my-2 text-2xl font-bold">{tech.name}</h2>
     <p>{tech.description}</p>
     <div className='flex justify-between item center my-2'>
         <h2 className='badge badge-ghost'>{tech.category}</h2>
@@ -31,7 +32,7 @@ const Techcard = ({tech,onAdd}:techProps) => {
     <div className="card-actions justify-end">
       <button
        onClick={() => onAdd(tech)}
-        className="btn btn-block btn-neutral mx-auto my-2">Add to Stack</button>
+        className="btn btn-block btn-neutral mx-auto my-2">{isSelected ? "Added to Stack" : "Add to Stack"}</button>
     </div>
   </div>
 </div>
