@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import { use, useState } from 'react';
 import type { technologyType } from '../type/technologyType';
 import All from './All';
 import Selected from './Selected';
