@@ -16,8 +16,8 @@ const Hero = () => {
                    
 
                    <div className='mt-4 flex gap-3'>
-                    <button className="btn  btn-secondary">Secondary</button>
-                    <button className="btn ">Default</button>
+                    <button className="btn  btn-secondary">Explore Technology</button>
+                    <button className="btn ">Learn More</button>
                    </div>
             </div>
             <div>

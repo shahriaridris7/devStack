@@ -27,6 +27,7 @@ const Techcard = ({tech,onAdd,isSelected}:techProps) => {
     <div className='flex justify-between items-centercenter my-2'>
         <h2 className='badge badge-ghost'>{tech.category}</h2>
         <h2 className='badge badge-ghost'>{tech.difficulty}</h2>
+        
         <h2 className='badge badge-ghost'>{tech.rating}</h2>
     </div>
     <div className="card-actions justify-end">

@@ -5,6 +5,8 @@ import Nav from "./component/Nav"
 import Technology from "./component/Technology";
 import type { technologyType } from "./type/technologyType";
 import Footer from "./component/Footer";
+import { ToastContainer } from "react-toastify";
+
 
 const  technologiesfetch =async():Promise<technologyType[]>=>{
   const res= await fetch('/data.json')
@@ -17,10 +19,10 @@ function App() {
 const technologiesPromise= technologiesfetch()
   return (
     <>
-    
+    <ToastContainer/>
       <Nav/>
        <Hero/>
-
+         
           <Suspense
   fallback={
     <div className="flex justify-center items-center ">
